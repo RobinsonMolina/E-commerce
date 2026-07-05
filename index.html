@@ -1,50 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoommerce</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AzulStore: tienda en línea de tecnología y accesorios con envío gratis.">
+  <title>RobinSystems | Tecnología y estilo</title>
+
+  <!-- Tipografía (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Iconos (Font Awesome desde CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div clss="logo">
-            <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/unnamed_250x_200x_2x_260x_24408e11-6e3a-4a0c-8327-74d0455f7696_260x.jpg?v=1646547348" alt="logo">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="#inicio" class="header__logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        Robin<span class="header__logo-acento">Store</span>
+      </a>
+
+      <nav class="menu">
+        <ul class="menu__lista">
+          <li class="menu__item"><a href="#inicio" class="menu__enlace">Inicio</a></li>
+          <li class="menu__item"><a href="#categorias" class="menu__enlace">Categorías</a></li>
+          <li class="menu__item"><a href="#productos" class="menu__enlace">Productos</a></li>
+          <li class="menu__item"><a href="#pasos" class="menu__enlace">Cómo comprar</a></li>
+          <li class="menu__item"><a href="#contacto" class="menu__enlace menu__enlace--boton">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acciones">
+        <a href="#productos" class="header__icono" aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#productos" class="header__icono header__carrito" aria-label="Carrito de compras">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="header__badge">3</span>
+        </a>
+      </div>
     </div>
-    <main>
-        <h1>Ecoommerce</h1>
-        <p>Welcome to Ecoommerce</p>
-        <div class="products">
-            <div class="product">
-                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-4_1_180x.jpg?v=1646547348" alt="product">
-                <h2>Product 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, doloremque.</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-4_1_180x.jpg?v=1646547348" alt="product">
-                <h2>Product 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, doloremque.</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/products/Artboard1-4_1_180x.jpg?v=1646547348" alt="product">
-                <h2>Product 3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, doloremque.</p>
-                <button>Add to Cart</button>
-            </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__contenido">
+        <span class="hero__etiqueta"><i class="fa-solid fa-bolt"></i> Ofertas de temporada</span>
+        <h1 class="hero__titulo">La tecnología que amas, <span class="hero__resaltado">al mejor precio</span></h1>
+        <p class="hero__texto">Descubre audífonos, relojes, cámaras y accesorios con envío gratis a todo el país y garantía de 12 meses.</p>
+
+        <div class="hero__botones">
+          <a href="#productos" class="boton boton--primario">Ver productos <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#categorias" class="boton boton--secundario">Explorar categorías</a>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2022 Ecoommerce. All rights reserved.</p>
-    </footer>
+
+        <ul class="hero__datos">
+          <li class="hero__dato"><span class="hero__numero">+5.000</span> clientes felices</li>
+          <li class="hero__dato"><span class="hero__numero">98%</span> reseñas positivas</li>
+          <li class="hero__dato"><span class="hero__numero">24/7</span> soporte en línea</li>
+        </ul>
+      </div>
+
+      <div class="hero__visual">
+        <img class="hero__imagen" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop" alt="Interior de una tienda con productos exhibidos">
+        <span class="hero__flotante hero__flotante--envio"><i class="fa-solid fa-truck-fast"></i> Envío gratis</span>
+        <span class="hero__flotante hero__flotante--descuento">-30% hoy</span>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section class="beneficios">
+      <div class="beneficio">
+        <i class="fa-solid fa-truck-fast beneficio__icono"></i>
+        <div class="beneficio__texto">
+          <h3>Envío gratis</h3>
+          <p>En compras superiores a $150.000</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <i class="fa-solid fa-shield-halved beneficio__icono"></i>
+        <div class="beneficio__texto">
+          <h3>Garantía real</h3>
+          <p>12 meses en todos los productos</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <i class="fa-solid fa-lock beneficio__icono"></i>
+        <div class="beneficio__texto">
+          <h3>Pago seguro</h3>
+          <p>Tarjeta, PSE o contraentrega</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <i class="fa-solid fa-headset beneficio__icono"></i>
+        <div class="beneficio__texto">
+          <h3>Soporte 24/7</h3>
+          <p>Te acompañamos en tu compra</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORÍAS ================= -->
+    <section class="categorias" id="categorias">
+      <h2 class="seccion__titulo">Categorías populares</h2>
+      <p class="seccion__subtitulo">Encuentra lo que buscas en segundos</p>
+
+      <div class="categorias__grid">
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-headphones"></i>
+          <h3>Audio</h3>
+          <span>24 productos</span>
+        </a>
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Relojes</h3>
+          <span>18 productos</span>
+        </a>
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-shoe-prints"></i>
+          <h3>Calzado</h3>
+          <span>32 productos</span>
+        </a>
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-glasses"></i>
+          <h3>Gafas</h3>
+          <span>12 productos</span>
+        </a>
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-camera"></i>
+          <h3>Fotografía</h3>
+          <span>9 productos</span>
+        </a>
+        <a href="#productos" class="categoria">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3>Accesorios</h3>
+          <span>41 productos</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section class="productos" id="productos">
+      <h2 class="seccion__titulo">Productos destacados</h2>
+      <p class="seccion__subtitulo">Lo más vendido de la semana</p>
+
+      <div class="productos__grid">
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta">Top ventas</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop" alt="Audífonos inalámbricos negros">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Audio</span>
+            <h3 class="producto__nombre">Audífonos Nova Pro</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(128)</span>
+            </div>
+            <p class="producto__precio"><span class="producto__precio--antes">$349.900</span> $289.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta producto__etiqueta--nuevo">Nuevo</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600&auto=format&fit=crop" alt="Reloj de pulso con correa clara">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Relojes</span>
+            <h3 class="producto__nombre">Reloj Classic Acero</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(86)</span>
+            </div>
+            <p class="producto__precio">$459.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta producto__etiqueta--oferta">-25%</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Tenis deportivos rojos">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Calzado</span>
+            <h3 class="producto__nombre">Tenis Runner Max</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(210)</span>
+            </div>
+            <p class="producto__precio"><span class="producto__precio--antes">$429.900</span> $319.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta producto__etiqueta--oferta">-15%</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=600&auto=format&fit=crop" alt="Gafas de sol estilo aviador">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Gafas</span>
+            <h3 class="producto__nombre">Gafas Sol Aviador</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+              <span>(74)</span>
+            </div>
+            <p class="producto__precio"><span class="producto__precio--antes">$152.900</span> $129.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta producto__etiqueta--nuevo">Nuevo</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop" alt="Mochila urbana de cuero">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Accesorios</span>
+            <h3 class="producto__nombre">Mochila Urban Pro</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(59)</span>
+            </div>
+            <p class="producto__precio">$189.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto__media">
+            <span class="producto__etiqueta">Top ventas</span>
+            <img class="producto__imagen" src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=600&auto=format&fit=crop" alt="Cámara fotográfica compacta">
+          </div>
+          <div class="producto__info">
+            <span class="producto__categoria">Fotografía</span>
+            <h3 class="producto__nombre">Cámara Compacta X100</h3>
+            <div class="producto__estrellas">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+              <span>(33)</span>
+            </div>
+            <p class="producto__precio">$1.299.900</p>
+            <a href="#" class="producto__boton"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CÓMO COMPRAR (lista ordenada) ================= -->
+    <section class="pasos" id="pasos">
+      <h2 class="seccion__titulo seccion__titulo--claro">Compra en 3 pasos</h2>
+      <p class="seccion__subtitulo seccion__subtitulo--claro">Así de fácil es estrenar con AzulStore</p>
+
+      <ol class="pasos__lista">
+        <li class="paso">
+          <h3>Elige tus productos</h3>
+          <p>Explora el catálogo y agrega al carrito todo lo que te guste.</p>
+        </li>
+        <li class="paso">
+          <h3>Paga seguro</h3>
+          <p>Tarjeta, PSE o pago contraentrega: tú decides cómo pagar.</p>
+        </li>
+        <li class="paso">
+          <h3>Recibe en casa</h3>
+          <p>Tu pedido llega en 2 a 5 días hábiles a cualquier ciudad.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= BANNER DE OFERTA ================= -->
+    <section class="banner" id="banner-oferta">
+      <div class="banner__contenido">
+        <span class="banner__etiqueta">Solo por hoy</span>
+        <h2 class="banner__titulo">Hasta <span>40% OFF</span> en audio</h2>
+        <p class="banner__texto">Usa el cupón <span class="banner__cupon">AZUL40</span> antes de la medianoche.</p>
+        <a href="#productos" class="boton boton--claro">Aprovechar oferta</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contacto">
+    <div class="footer__grid">
+
+      <div class="footer__col footer__col--marca">
+        <a href="#inicio" class="footer__logo">Robin<span>Store</span></a>
+        <p>Tu tienda de tecnología y estilo con los mejores precios y envíos a todo el país.</p>
+        <div class="footer__redes">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__titulo">Tienda</h3>
+        <ul class="footer__lista">
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#banner-oferta">Ofertas</a></li>
+          <li><a href="#inicio">Novedades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__titulo">Ayuda</h3>
+        <ul class="footer__lista">
+          <li><a href="#pasos">Cómo comprar</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Garantía</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul class="footer__lista footer__lista--contacto">
+          <li><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</li>
+          <li><i class="fa-solid fa-envelope"></i> hola@robinstore.co</li>
+          <li><i class="fa-solid fa-phone"></i> +57 300 123 4567</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__final">
+      <p>© 2026 AzulStore. Todos los derechos reservados.</p>
+      <p>Hecho con <span class="footer__corazon">♥</span> para aprender HTML y CSS</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante para volver arriba -->
+  <a href="#inicio" id="btn-arriba" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+
 </body>
 </html>
